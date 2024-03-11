@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+#topSection {
+    width: 100vw;
+    aspect-ratio: 5.1428571429/1;
+    background-image: url(images/pattern-bg-desktop.png);
+    background-size: cover;
+    text-align: center;
+}
+#inputItems{
+    display: flex;
+    justify-content: center;
+}
+#searchBox {
+    width: 33vw;
+    padding: 1.2vw 0 1.2vw 1.5vw;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-style: none;
+    color: hsl(0, 0%, 59%);
+    cursor: pointer;
+}
+#searchBox:focus {
+    outline: none;
+    color: hsl(0, 0%, 17%);
+}
+::placeholder{
+    color: hsl(0, 0%, 59%);
+}
+#searchButton {
+    background-color: hsl(0, 0%, 17%);
+    padding: 1vw 1.5vw;
+    border-style: none;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    cursor: pointer;
+}
+#myHeading {
+    color: white;
+    font-size: 1.95vw;
+    font-weight: 500;
+    padding: 2vw 0;
+}
+#IPAddressLocations {
+    margin: auto;
+    width: 76%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: .7vw;
+    position: relative;
+    top: -5.4vw;
+    border-radius: 1.5vw;
+}
+.infoItem {
+    width: 25%;
+    padding: 1.5vw 3.5vw 1.5vw 2vw;
+}
+hr {    
+    height: 5.5vw;
+    width: 0;
+    margin-top: 4%;
+    opacity: .5;
+    color: hsl(0, 0%, 59%);
+}
+.infoTitle {
+    color: hsl(0, 0%, 59%);
+    margin-bottom: 0.8vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+}
+.infoValue{
+    color: hsl(0, 0%, 17%);
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+#map {
+    position: absolute;
+    top: 19vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width:600px) {
+    #topSection {
+        aspect-ratio: 1.25/1;
+        background-image: url(images/pattern-bg-mobile.png);
+    }
+    #searchBox {
+        width: 75vw;
+        padding: 3.5vw 0 3.5vw 5vw;
+        border-top-left-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+    }
+    #searchButton {
+        padding: 3.5vw 5vw;
+        border-top-right-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+    } 
+    ::placeholder{
+        font-size: 3vw;
+    }
+    #myHeading {
+        font-size: 5vw;
+        font-weight: 500;
+        padding: 5vw 0;
+    }
+    #IPAddressLocations {
+        margin: auto;
+        width: 88%;
+        flex-direction: column;
+        padding-bottom: 6vw;
+        position: relative;
+        top: -43vw;
+        border-radius: 4svw;
+    }
+    hr {
+        display: none;
+    }
+    .infoTitle {
+        margin-bottom: 2vw;
+        font-size: 3.2vw;
+    }
+    .infoValue{
+        font-size: 5.2vw;
+    }
+    .infoItem {
+        width: auto;
+        padding: 6vw 0 0vw 0;
+        
+        text-align: center;
+    }
+    #map {
+        position: absolute;
+        top: 80vw;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
